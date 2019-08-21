@@ -1,0 +1,39 @@
+﻿@model IEnumerable<VendeeEauTest2.Models.ConseilLocal>
+
+@{
+    ViewData["Title"] = "ConseilLocal";
+}
+
+<h2>ConseilLocal</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdConseilLocal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomConseilLocal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdConseilLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomConseilLocal)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
